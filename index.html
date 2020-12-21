@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome Cdn Link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Jquery Cdn Link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>My Portfolio</title>
+    </head>
+
+    <body class="indexBody">
+        <!-- Navbar -->
+        <nav class="navigation">
+            <a href="#" id="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="service.html">Services</a>
+            <a href="#testimonial">Testimonial</a>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="bannerHeading">
+                <h1>This is Akshay Sharma</h1>
+                <h2>Web Designer & Frontend Deveoper</h2>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="bannerImg">
+
+                <div class="outerImgDiv">
+                    <div class="innerImgDiv">
+                        <img src="man.png" alt="Not Found">
+                    </div>
+
+                </div>
+                <ul>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills">
+            <div class="outerSkills" id="outerSkills1">
+                <div>
+                    <p>C language</p>
+                    <p id="percentage1">60%</p>
+                </div>
+            </div>
+            <div class="outerSkills" id="outerSkills2">
+                <div>
+                    <p>C++ language</p>
+                    <p id="percentage2">55%</p>
+                </div>
+            </div>
+            <div class="outerSkills" id="outerSkills3">
+                <div>
+                    <p>Java language</p>
+                    <p id="percentage3">65%</p>
+                </div>
+            </div>
+            <div class="outerSkills" id="outerSkills4">
+                <div>
+                    <p>Python</p>
+                    <p id="percentage4">59%</p>
+                </div>
+            </div>
+            <div class="outerSkills" id="outerSkills5">
+                <div>
+                    <p>Tkinter</p>
+                    <p id="percentage5">45%</p>
+                </div>
+            </div>
+            <div class="outerSkills" id="outerSkills6">
+                <div>
+                    <p>Web Development</p>
+                    <p id="percentage6">70%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <h1 class="heading2">Testimonial</h1>
+        <h2 id="clientSpeak">What Client Speak</h2>
+        <div id="testimonial">
+            <div id="client1">
+                <img src="human1.png" alt="Not Found">
+                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloribus quidem illo modi repellat.
+                    Ipsam id quidem libero dolorem ex!</q>
+            </div>
+            <div id="client2">
+                <img src="human2.png" alt="Not Found">
+                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloribus quidem illo modi repellat.
+                    Ipsam id quidem libero dolorem ex!</q>
+            </div>
+            <div id="client3">
+                <img src="human3.png" alt="Not Found">
+                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloribus quidem illo modi repellat.
+                    Ipsam id quidem libero dolorem ex!</q>
+            </div>
+        </div>
+
+        <div id="testimonialNavigate">
+            <div id="testiN1"></div>
+            <div id="testiN2"></div>
+            <div id="testiN3"></div>
+        </div>
+
+        <footer>
+            <h3> <i class="fa fa-copyright" aria-hidden="true"> </i> <span id="year"> </span> All Right Reseved</h3>
+        </footer>
+
+        <!-- Script -->
+        <script>
+            $(document).ready(function () {
+                let dt = new Date();
+                document.getElementById('year').innerHTML = dt.getFullYear();
+                $('#testiN1').click(() => {
+                    $('#client1').css('display', 'flex');
+                    $('#client2').css('display', 'none');
+                    $('#client3').css('display', 'none');
+
+                    $('#testiN1').css({
+
+                        backgroundColor: 'var(--color)',
+                        transform: 'scale(0.8, 0.8)'
+                    });
+                    $('#testiN2').css({
+                        backgroundColor: 'transparent',
+                        transform: 'none'
+                    });
+                    $('#testiN3').css({
+                        backgroundColor: 'transparent',
+                        transform: 'none'
+                    });
+                });
+                $('#testiN2').click(() => {
+                    $('#client1').css('display', 'none');
+                    $('#client2').css('display', 'flex');
+                    $('#client3').css('display', 'none');
+
+                    $('#testiN2').css({
+
+                        backgroundColor: 'var(--color)',
+                        transform: 'scale(0.8, 0.8)'
+                    });
+                    $('#testiN1').css({
+                        backgroundColor: 'transparent',
+                        transform: 'none'
+                    });
+                    $('#testiN3').css({
+                        backgroundColor: 'transparent',
+                        transform: 'none'
+                    });
+                });
+                $('#testiN3').click(() => {
+                    $('#client1').css('display', 'none');
+                    $('#client2').css('display', 'none');
+                    $('#client3').css('display', 'flex');
+
+                    $('#testiN3').css({
+
+                        backgroundColor: 'var(--color)',
+                        transform: 'scale(0.8, 0.8)'
+                    });
+                    $('#testiN1').css({
+                        backgroundColor: 'transparent',
+                        transform: 'none'
+                    });
+                    $('#testiN2').css({
+                        backgroundColor: 'transparent',
+                        transform: 'none'
+                    });
+                });
+            });
+
+
+        </script>
+    </body>
+
+</html>

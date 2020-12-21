@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome Cdn Link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Jquery Cdn Link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <title>My Portfolio</title>
+    </head>
+
+    <body class="indexBody">
+        <!-- Navbar -->
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#" id="active">Contact</a>
+            <a href="service.html">Services</a>
+
+        </nav>
+
+        <!-- Contact Section -->
+        <div id="contactUpperDiv">
+            <div>
+                <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                <h2>Email Id</h2>
+                <p>example@gmail.com</p>
+            </div>
+            <div>
+                <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                <h2>Phone No</h2>
+                <p>+1234567890</p>
+            </div>
+            <div>
+                <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                <h2>Address</h2>
+                <p>Greater Noida</p>
+            </div>
+        </div>
+        <form action="" id="contact">
+
+            <div id="contactLowerDiv">
+                <p id="nameLabel"></p>
+                <input type="text" class="classinputFied" placeholder="Name" id="nameInput">
+                <p id="emailLabel"></p>
+                <input type="email" class="classinputFied" placeholder="Email Id" id="emailInput">
+                <p id="subjectLabel"></p>
+                <input type="text" class="classinputFied" placeholder="Subject" id="subjectInput">
+                <p id="phoneLabel"></p>
+                <input type="text" class="classinputFied" placeholder="Phone no" id="phoneInput">
+
+                <textarea placeholder="Message....."></textarea>
+                <div>
+                    <input type="reset" value="Reset" class="inputBtn">
+                    <input type="submit" value="Submit" class="inputBtn">
+                </div>
+
+            </div>
+        </form>
+
+
+        <footer>
+            <h3> <i class="fa fa-copyright" aria-hidden="true"> </i> <span id="year"> </span> All Right Reseved</h3>
+        </footer>
+
+        <!-- Script -->
+        <script>
+            $(document).ready(function () {
+                let dt = new Date();
+                let name = document.getElementById('nameLabel');
+                let email = document.getElementById('emailLabel');
+                let subject = document.getElementById('subjectLabel');
+                let phone = document.getElementById('phoneLabel');
+                let nameInput = document.getElementById('nameInput');
+                let emailInput = document.getElementById('emailInput');
+                let subjectInput = document.getElementById('subjectInput');
+                let phoneInput = document.getElementById('phoneInput');
+                document.getElementById('year').innerHTML = dt.getFullYear();
+                $('#nameInput').focus(() => {
+                    name.innerHTML = 'Name';
+                    nameInput.placeholder = "";
+                })
+                $('#nameInput').blur(() => {
+                    name.innerHTML = '';
+                    nameInput.placeholder = "Name";
+                })
+                $('#emailInput').focus(() => {
+                    email.innerHTML = 'Email Id';
+                    emailInput.placeholder = "";
+                })
+                $('#emailInput').blur(() => {
+                    email.innerHTML = '';
+                    emailInput.placeholder = "Email Id";
+                })
+                $('#subjectInput').focus(() => {
+                    subject.innerHTML = 'Subject';
+                    subjectInput.placeholder = "";
+                })
+                $('#subjectInput').blur(() => {
+                    subject.innerHTML = '';
+                    subjectInput.placeholder = "Subject";
+                })
+                $('#phoneInput').focus(() => {
+                    phone.innerHTML = 'Phone No';
+                    phoneInput.placeholder = "";
+                })
+                $('#phoneInput').blur(() => {
+                    phone.innerHTML = '';
+                    phoneInput.placeholder = "Phone No";
+                })
+
+            });
+
+        </script>
+    </body>
+
+</html>
